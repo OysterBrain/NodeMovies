@@ -1,1 +1,36 @@
+<<<<<<< HEAD
 {"main":"lib/index.js","scripts":{"start":"node server","test":"lab -a @hapi/code -L","lint":"eslint ."},"dependencies":{"@hapi/boom":"8.x.x","@hapi/joi":"16.x.x","haute-couture":"3.x.x"},"devDependencies":{"@hapi/code":"6.x.x","@hapi/eslint-config-hapi":"12.x.x","@hapi/eslint-plugin-hapi":"4.x.x","@hapi/glue":"6.x.x","@hapi/hapi":"18.x.x","@hapi/lab":"20.x.x","confidence":"4.x.x","dotenv":"8.x.x","eslint":"6.x.x","hpal":"2.x.x","hpal-debug":"1.x.x","toys":"2.x.x"}}
+=======
+{
+  "name": "hapipal-boilerplate",
+  "version": "2.3.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "lab -a @hapi/code -L",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@hapi/boom": "8.x.x",
+    "@hapi/joi": "16.x.x",
+    "haute-couture": "3.x.x"
+  },
+  "devDependencies": {
+    "@hapi/code": "6.x.x",
+    "@hapi/eslint-config-hapi": "12.x.x",
+    "@hapi/eslint-plugin-hapi": "4.x.x",
+    "@hapi/glue": "6.x.x",
+    "@hapi/hapi": "18.x.x",
+    "@hapi/inert": "5.x.x",
+    "@hapi/lab": "20.x.x",
+    "@hapi/vision": "5.x.x",
+    "confidence": "4.x.x",
+    "dotenv": "8.x.x",
+    "eslint": "6.x.x",
+    "hapi-swagger": "10.x.x",
+    "hpal": "2.x.x",
+    "hpal-debug": "1.x.x",
+    "toys": "2.x.x"
+  }
+}
+>>>>>>> 8c4240e... (flavor) swagger v2.4.1
