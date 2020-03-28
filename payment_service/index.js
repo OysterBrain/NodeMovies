@@ -4,7 +4,7 @@ const HauteCouture = require('haute-couture');
 const Package = require('../package.json');
 
 exports.plugin = {
-    pkg: Package,
+    name: "payment_service",
     register: async (server, options) => {
 
         // Custom plugin code can go here

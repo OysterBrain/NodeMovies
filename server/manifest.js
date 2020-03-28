@@ -29,14 +29,27 @@ module.exports = new Confidence.Store({
     },
     register: {
         plugins: [
+
             {
-                plugin: '../lib', // Main plugin
+                plugin: 'hapi-auth-jwt2'
+            },
+            {
+                plugin: '../user_service', // User plugin
                 options: {}
             },
             {
-<<<<<<< HEAD
+                plugin: '../movie_service', // Movie plugin
+                options: {}
+            },
+            {
+                plugin: '../payment_service', // Payment plugin
+                options: {}
+            },
+            {
+
                 plugin: './plugins/swagger'
-=======
+            },
+            {
                 plugin: 'schwifty',
                 options: {
                     $filter: 'NODE_ENV',
@@ -44,18 +57,21 @@ module.exports = new Confidence.Store({
                     $base: {
                         migrateOnStart: true,
                         knex: {
-                            client: 'sqlite3',
-                            useNullAsDefault: true,     // Suggested for sqlite3
+                            client: 'mysql',
                             connection: {
-                                filename: ':memory:'
+                                host: process.env.DB_HOST || '127.0.0.1',
+                                user: process.env.DB_USER || 'root',
+                                password: process.env.DB_PASSWORD || '',
+                                database: process.env.DB_DATABASE || 'node_movie'
                             }
                         }
                     },
                     production: {
                         migrateOnStart: false
                     }
+
                 }
->>>>>>> fc1df67... (flavor) objection v2.5.1
+
             },
             {
                 plugin: {
@@ -63,7 +79,10 @@ module.exports = new Confidence.Store({
                     $default: 'hpal-debug',
                     production: Toys.noop
                 }
-            }
+            },
+
+
+
         ]
     }
 });
